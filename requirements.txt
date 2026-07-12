@@ -1,0 +1,7 @@
+numpy>=1.23
+scipy>=1.9
+matplotlib>=3.6
+# Optional, for the real-data loaders:
+pandas>=1.5          # RetailRocket, Trivago
+scikit-learn>=1.1    # OTTO co-visit clustering (falls back if absent)
+torch>=2.0           # optional: directed-GNN oversmoothing baseline (scripts/run_gnn.py)

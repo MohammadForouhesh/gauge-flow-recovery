@@ -1,0 +1,61 @@
+{
+  "benchmark": {
+    "rows": [
+      {
+        "interior": 1000,
+        "edges": 1980,
+        "cg_seconds": 0.010298013687133789,
+        "cholesky_seconds": 0.16434097290039062,
+        "max_abs_diff": 2.6695656796249523e-09
+      },
+      {
+        "interior": 2000,
+        "edges": 3960,
+        "cg_seconds": 0.014516830444335938,
+        "cholesky_seconds": 1.185549020767212,
+        "max_abs_diff": 4.047914448079837e-09
+      },
+      {
+        "interior": 4000,
+        "edges": 7920,
+        "cg_seconds": 0.02601003646850586,
+        "cholesky_seconds": 12.891463994979858,
+        "max_abs_diff": 2.992213143926392e-09
+      },
+      {
+        "interior": 8000,
+        "edges": 15840,
+        "cg_seconds": 0.053854942321777344,
+        "cholesky_seconds": null,
+        "max_abs_diff": null
+      },
+      {
+        "interior": 16000,
+        "edges": 31840,
+        "cg_seconds": 0.12080001831054688,
+        "cholesky_seconds": null,
+        "max_abs_diff": null
+      },
+      {
+        "interior": 40000,
+        "edges": 79800,
+        "cg_seconds": 0.3923611640930176,
+        "cholesky_seconds": null,
+        "max_abs_diff": null
+      }
+    ]
+  },
+  "recovery": {
+    "num_states": 10202,
+    "num_dag_edges": 10348,
+    "n_scored": 1716,
+    "sobolev": {
+      "spearman": 0.9356141990003808,
+      "cg_seconds": 0.07840394973754883
+    },
+    "tikhonov": {
+      "spearman": -0.17629287565065926,
+      "cg_seconds": 0.008345842361450195
+    }
+  }
+}

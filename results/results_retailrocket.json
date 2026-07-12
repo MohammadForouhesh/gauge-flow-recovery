@@ -1,0 +1,120 @@
+{
+  "dataset": "RetailRocket",
+  "summary": "RetailRocket: 41,184 sessions, 4 states, 13,601 conversions (33.02%)",
+  "R1_potential": {
+    "dataset": "RetailRocket",
+    "lambda1": 1.0,
+    "penalty": "sobolev",
+    "num_dag_edges": 4,
+    "phi_table": [
+      {
+        "state": 2,
+        "label": "SINK:transaction",
+        "phi": 1.0
+      },
+      {
+        "state": 1,
+        "label": "addtocart",
+        "phi": 0.31691216911187087
+      },
+      {
+        "state": 3,
+        "label": "SINK:abandon",
+        "phi": 0.0
+      },
+      {
+        "state": 0,
+        "label": "view",
+        "phi": -0.6004377621810149
+      }
+    ]
+  },
+  "R2_regularizer_contrast": {
+    "dataset": "RetailRocket",
+    "lambda1": 1.0,
+    "n_interior": 2,
+    "base_interior_range": 2.2561113611693524,
+    "sobolev": {
+      "spearman_vs_base": 0.9999999999999999,
+      "interior_range": 0.9173499312928857,
+      "range_retained": 0.4066066715860216
+    },
+    "tikhonov": {
+      "spearman_vs_base": 0.9999999999999999,
+      "interior_range": 0.46930318005266425,
+      "range_retained": 0.20801419120074566
+    }
+  },
+  "R3_sink_discovery": {
+    "dataset": "RetailRocket",
+    "num_states": 4,
+    "conversion_sinks": [
+      2
+    ],
+    "residual_ranks": [
+      3
+    ],
+    "residual_worst": 3,
+    "phi_ranks": [
+      1
+    ],
+    "phi_worst": 1
+  },
+  "R4_bootstrap": {
+    "dataset": "RetailRocket",
+    "n_boot": 20,
+    "stability_table": [
+      {
+        "state": 1,
+        "label": "addtocart",
+        "phi_mean": 0.31642059000051154,
+        "phi_std": 0.0032234864840605757,
+        "cv": 0.010187347429082214
+      },
+      {
+        "state": 0,
+        "label": "view",
+        "phi_mean": -0.6004612569832326,
+        "phi_std": 0.002101541181600781,
+        "cv": 0.0034998780639996646
+      }
+    ]
+  },
+  "R5_downstream": {
+    "dataset": "RetailRocket",
+    "num_states": 4,
+    "n_sessions": 41184,
+    "conversion_rate": 0.3302496114996115,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "auc": {
+      "raw": {
+        "auc_mean": 0.6538296466991779,
+        "auc_std": 0.004130430446004654
+      },
+      "raw+sobolev": {
+        "auc_mean": 0.7045292177730127,
+        "auc_std": 0.001468730869774477
+      },
+      "raw+ridge": {
+        "auc_mean": 0.7076130113448541,
+        "auc_std": 0.003151973064261826
+      },
+      "sobolev": {
+        "auc_mean": 0.700289236250493,
+        "auc_std": 0.00014879589174018174
+      },
+      "ridge": {
+        "auc_mean": 0.6993917484377901,
+        "auc_std": 0.0011363071324206504
+      },
+      "bag_of_states": {
+        "auc_mean": 0.6054177629584532,
+        "auc_std": 0.0020670777936538597
+      }
+    }
+  }
+}

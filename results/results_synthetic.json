@@ -1,0 +1,503 @@
+{
+  "config": {
+    "seed": 42,
+    "num_sessions": 50000,
+    "num_states": 277,
+    "sink_entropy_bits": 2.268079412001752
+  },
+  "E1_regularizer_sweep": {
+    "lambdas": [
+      0.0,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "n_well": 95,
+    "sobolev": [
+      {
+        "lambda1": 0.0,
+        "spearman": 0.8098617717848445,
+        "pearson": 0.7582992905398135,
+        "ndcg5": 0.9657726687261222,
+        "ndcg10": 0.9542523410665978
+      },
+      {
+        "lambda1": 0.001,
+        "spearman": 0.8070505794523665,
+        "pearson": 0.7601270685725796,
+        "ndcg5": 0.9657726687261222,
+        "ndcg10": 0.9542523410665978
+      },
+      {
+        "lambda1": 0.01,
+        "spearman": 0.8071864436941883,
+        "pearson": 0.7666912559915704,
+        "ndcg5": 0.981926036659117,
+        "ndcg10": 0.9664978138311672
+      },
+      {
+        "lambda1": 0.1,
+        "spearman": 0.8071864436941883,
+        "pearson": 0.7832523539913028,
+        "ndcg5": 0.981926036659117,
+        "ndcg10": 0.9664978138311672
+      },
+      {
+        "lambda1": 1.0,
+        "spearman": 0.8071864436941883,
+        "pearson": 0.831052535388334,
+        "ndcg5": 0.9987673527267692,
+        "ndcg10": 0.9742531309755083
+      },
+      {
+        "lambda1": 10.0,
+        "spearman": 0.8071864436941883,
+        "pearson": 0.8486206668493681,
+        "ndcg5": 0.981926036659117,
+        "ndcg10": 0.9664978138311672
+      }
+    ],
+    "tikhonov": [
+      {
+        "lambda1": 0.0,
+        "spearman": 0.8098617717848445,
+        "pearson": 0.7582992905398135,
+        "ndcg5": 0.9657726687261222,
+        "ndcg10": 0.9542523410665978
+      },
+      {
+        "lambda1": 0.001,
+        "spearman": -0.45030856036996036,
+        "pearson": -0.054522605290731774,
+        "ndcg5": 0.7560723449855621,
+        "ndcg10": 0.7577531261713955
+      },
+      {
+        "lambda1": 0.01,
+        "spearman": -0.4244386605940084,
+        "pearson": -0.005414738405223246,
+        "ndcg5": 0.7561177700936768,
+        "ndcg10": 0.7577786355608516
+      },
+      {
+        "lambda1": 0.1,
+        "spearman": -0.4180468504128849,
+        "pearson": 0.0007516310664032744,
+        "ndcg5": 0.7561177700936768,
+        "ndcg10": 0.7577786355608516
+      },
+      {
+        "lambda1": 1.0,
+        "spearman": -0.42161877185084223,
+        "pearson": 0.0013837018207983748,
+        "ndcg5": 0.7561177700936768,
+        "ndcg10": 0.7577786355608516
+      },
+      {
+        "lambda1": 10.0,
+        "spearman": -0.551161290295331,
+        "pearson": 0.0014470667000233695,
+        "ndcg5": 0.7561177700936768,
+        "ndcg10": 0.7577786355608516
+      }
+    ]
+  },
+  "E2_chain_dynamic_range": {
+    "length": 30,
+    "lambdas": [
+      0.0,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "sobolev": [
+      {
+        "lambda1": 0.0,
+        "delta_phi": 1.0000000000000024
+      },
+      {
+        "lambda1": 0.01,
+        "delta_phi": 0.9996722386102939
+      },
+      {
+        "lambda1": 0.1,
+        "delta_phi": 0.9967320261437931
+      },
+      {
+        "lambda1": 1.0,
+        "delta_phi": 0.9682539682539701
+      },
+      {
+        "lambda1": 10.0,
+        "delta_phi": 0.7530864197530889
+      }
+    ],
+    "tikhonov": [
+      {
+        "lambda1": 0.0,
+        "delta_phi": 1.0000000000000024
+      },
+      {
+        "lambda1": 0.01,
+        "delta_phi": 1.7136087184538278
+      },
+      {
+        "lambda1": 0.1,
+        "delta_phi": 1.2834834595575901
+      },
+      {
+        "lambda1": 1.0,
+        "delta_phi": 0.5358983848622452
+      },
+      {
+        "lambda1": 10.0,
+        "delta_phi": 0.09109769979335547
+      }
+    ]
+  },
+  "E3_sink_discovery": {
+    "num_states": 277,
+    "num_sinks": 5,
+    "residual_ranks": [
+      4,
+      3,
+      7,
+      5,
+      6
+    ],
+    "residual_worst": 7,
+    "phi_ranks": [
+      108,
+      79,
+      60,
+      53,
+      52
+    ],
+    "phi_worst": 108
+  },
+  "E3_cross_regime": {
+    "rows": [
+      {
+        "abandon_rate": 0.05,
+        "residual_ranks": [
+          4,
+          3,
+          7,
+          5,
+          6
+        ],
+        "residual_worst": 7
+      },
+      {
+        "abandon_rate": 0.2,
+        "residual_ranks": [
+          4,
+          3,
+          7,
+          5,
+          6
+        ],
+        "residual_worst": 7
+      },
+      {
+        "abandon_rate": 0.5,
+        "residual_ranks": [
+          4,
+          3,
+          7,
+          5,
+          6
+        ],
+        "residual_worst": 7
+      }
+    ]
+  },
+  "E4_nilpotency": {
+    "nilpotency_index": 7,
+    "frobenius_at_index": 0.0
+  },
+  "E5_gradient_preservation": {
+    "cosine_hhd_gradient": -0.057286213105129165,
+    "cosine_recovered_phi": 0.19077822262728067,
+    "n_edges": 185
+  },
+  "E6_extraction_ablation": {
+    "rows": [
+      {
+        "extraction": "hhd",
+        "n_edges": 185,
+        "n_scored": 95,
+        "nilpotency_index": 7,
+        "acyclic": true,
+        "sobolev": {
+          "spearman": 0.8071864436941883,
+          "pearson": 0.831052535388334
+        },
+        "tikhonov": {
+          "spearman": -0.42161877185084223,
+          "pearson": 0.0013837018207983748
+        },
+        "margin_spearman": 1.2288052155450306
+      },
+      {
+        "extraction": "topo_visit_position",
+        "n_edges": 664,
+        "n_scored": 150,
+        "nilpotency_index": 38,
+        "acyclic": true,
+        "sobolev": {
+          "spearman": 0.9954593537490556,
+          "pearson": 0.6355965401585866
+        },
+        "tikhonov": {
+          "spearman": -0.32375328990925206,
+          "pearson": -0.0009149767965630773
+        },
+        "margin_spearman": 1.3192126436583076
+      },
+      {
+        "extraction": "topo_net_inflow",
+        "n_edges": 375,
+        "n_scored": 150,
+        "nilpotency_index": 5,
+        "acyclic": true,
+        "sobolev": {
+          "spearman": 0.9613816453161484,
+          "pearson": 0.8416592395975413
+        },
+        "tikhonov": {
+          "spearman": -0.5559473982598773,
+          "pearson": 0.000982113973011664
+        },
+        "margin_spearman": 1.5173290435760256
+      }
+    ]
+  },
+  "E7_regularizer_robustness": {
+    "lambda1": 1.0,
+    "n_variants": 12,
+    "rows": [
+      {
+        "label": "default (seed 42)",
+        "seed": 42,
+        "num_states": 277,
+        "sink_entropy_bits": 2.268079412001752,
+        "hhd": {
+          "sobolev": 0.8071864436941883,
+          "tikhonov": -0.42161877185084223,
+          "margin": 1.2288052155450306
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9954593537490556,
+          "tikhonov": -0.32375328990925206,
+          "margin": 1.3192126436583076
+        }
+      },
+      {
+        "label": "default (seed 1)",
+        "seed": 1,
+        "num_states": 277,
+        "sink_entropy_bits": 2.3091276787362665,
+        "hhd": {
+          "sobolev": 0.7948067599121363,
+          "tikhonov": -0.39359021412799566,
+          "margin": 1.1883969740401321
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9943654047102323,
+          "tikhonov": -0.33122199934475105,
+          "margin": 1.3255874040549833
+        }
+      },
+      {
+        "label": "default (seed 7)",
+        "seed": 7,
+        "num_states": 277,
+        "sink_entropy_bits": 2.318260022033385,
+        "hhd": {
+          "sobolev": 0.7930772967093271,
+          "tikhonov": -0.4438550844858405,
+          "margin": 1.2369323811951676
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9966189007799745,
+          "tikhonov": -0.3023997431205485,
+          "margin": 1.299018643900523
+        }
+      },
+      {
+        "label": "default (seed 123)",
+        "seed": 123,
+        "num_states": 277,
+        "sink_entropy_bits": 2.264545573052201,
+        "hhd": {
+          "sobolev": 0.8289741139276751,
+          "tikhonov": -0.37607695251010514,
+          "margin": 1.2050510664377803
+        },
+        "topo_visit_position": {
+          "sobolev": 0.996174052180097,
+          "tikhonov": -0.3780937232198854,
+          "margin": 1.3742677753999823
+        }
+      },
+      {
+        "label": "default (seed 2024)",
+        "seed": 2024,
+        "num_states": 277,
+        "sink_entropy_bits": 2.264719773754096,
+        "hhd": {
+          "sobolev": 0.7987476333281192,
+          "tikhonov": -0.4501213604606964,
+          "margin": 1.2488689937888156
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9949562819931942,
+          "tikhonov": -0.34707651172862436,
+          "margin": 1.3420327937218186
+        }
+      },
+      {
+        "label": "branches=3",
+        "seed": 42,
+        "num_states": 175,
+        "sink_entropy_bits": 1.488817104600537,
+        "hhd": {
+          "sobolev": 0.8832115115492448,
+          "tikhonov": -0.2506392050513232,
+          "margin": 1.133850716600568
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9889458357600466,
+          "tikhonov": -0.41041696635389724,
+          "margin": 1.3993628021139437
+        }
+      },
+      {
+        "label": "branches=8",
+        "seed": 42,
+        "num_states": 430,
+        "sink_entropy_bits": 2.9625962802158368,
+        "hhd": {
+          "sobolev": 0.8152445627386146,
+          "tikhonov": -0.48529135018219993,
+          "margin": 1.3005359129208145
+        },
+        "topo_visit_position": {
+          "sobolev": 0.992432235684821,
+          "tikhonov": -0.35523312599503193,
+          "margin": 1.3476653616798528
+        }
+      },
+      {
+        "label": "depth=30",
+        "seed": 42,
+        "num_states": 177,
+        "sink_entropy_bits": 2.2726306352641377,
+        "hhd": {
+          "sobolev": 0.8272617479198148,
+          "tikhonov": -0.3158231502303287,
+          "margin": 1.1430848981501436
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9931015205724509,
+          "tikhonov": -0.4298916044869752,
+          "margin": 1.422993125059426
+        }
+      },
+      {
+        "label": "depth=80",
+        "seed": 42,
+        "num_states": 427,
+        "sink_entropy_bits": 2.2717022326326646,
+        "hhd": {
+          "sobolev": 0.8771686320973529,
+          "tikhonov": -0.44892134592810706,
+          "margin": 1.3260899780254598
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9929009450977565,
+          "tikhonov": -0.2029036805461051,
+          "margin": 1.1958046256438617
+        }
+      },
+      {
+        "label": "abandon=0.2",
+        "seed": 42,
+        "num_states": 277,
+        "sink_entropy_bits": 2.264944986233137,
+        "hhd": {
+          "sobolev": 0.8709292208041216,
+          "tikhonov": -0.27993691476053945,
+          "margin": 1.150866135564661
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9950859950859949,
+          "tikhonov": -0.34545409326649823,
+          "margin": 1.3405400883524932
+        }
+      },
+      {
+        "label": "abandon=0.5",
+        "seed": 42,
+        "num_states": 277,
+        "sink_entropy_bits": 2.2564141194436615,
+        "hhd": {
+          "sobolev": 0.22784765971732976,
+          "tikhonov": -0.21675888407228025,
+          "margin": 0.44460654378961
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9922590068159689,
+          "tikhonov": -0.37028127108353875,
+          "margin": 1.3625402778995077
+        }
+      },
+      {
+        "label": "entropy=0.3",
+        "seed": 42,
+        "num_states": 277,
+        "sink_entropy_bits": 2.2997322528601893,
+        "hhd": {
+          "sobolev": 0.7997826106604431,
+          "tikhonov": -0.4398549638285768,
+          "margin": 1.23963757448902
+        },
+        "topo_visit_position": {
+          "sobolev": 0.9936132696368893,
+          "tikhonov": -0.3327516964072354,
+          "margin": 1.3263649660441248
+        }
+      }
+    ],
+    "summary": {
+      "hhd": {
+        "sobolev_mean": 0.7770198494215307,
+        "sobolev_std": 0.16854144236385377,
+        "tikhonov_mean": -0.37687401645740287,
+        "tikhonov_std": 0.08550907624243119,
+        "margin_mean": 1.1538938658789335,
+        "margin_std": 0.2212574881043767,
+        "margin_min": 0.44460654378961,
+        "margin_max": 1.3260899780254598,
+        "n_positive": 12,
+        "n_variants": 12
+      },
+      "topo_visit_position": {
+        "sobolev_mean": 0.9938260668388734,
+        "sobolev_std": 0.002016132260458929,
+        "tikhonov_mean": -0.34412314212186196,
+        "tikhonov_std": 0.0548617447294194,
+        "margin_mean": 1.3379492089607352,
+        "margin_std": 0.05431726798739462,
+        "margin_min": 1.1958046256438617,
+        "margin_max": 1.422993125059426,
+        "n_positive": 12,
+        "n_variants": 12
+      }
+    }
+  }
+}

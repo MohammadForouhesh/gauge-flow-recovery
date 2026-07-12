@@ -1,0 +1,204 @@
+{
+  "dataset": "Trivago",
+  "summary": "Trivago: 640,728 sessions, 11 states, 593,031 conversions (92.56%)",
+  "R1_potential": {
+    "dataset": "Trivago",
+    "lambda1": 1.0,
+    "penalty": "sobolev",
+    "num_dag_edges": 26,
+    "phi_table": [
+      {
+        "state": 9,
+        "label": "clickout item",
+        "phi": 1.0
+      },
+      {
+        "state": 8,
+        "label": "interaction item deals",
+        "phi": 0.9026227649033424
+      },
+      {
+        "state": 7,
+        "label": "interaction item rating",
+        "phi": 0.8308455095623589
+      },
+      {
+        "state": 4,
+        "label": "filter selection",
+        "phi": 0.8118867944547233
+      },
+      {
+        "state": 6,
+        "label": "interaction item info",
+        "phi": 0.8048561815441418
+      },
+      {
+        "state": 3,
+        "label": "change of sort order",
+        "phi": 0.6532616923395251
+      },
+      {
+        "state": 1,
+        "label": "search for item",
+        "phi": 0.5036873026031277
+      },
+      {
+        "state": 2,
+        "label": "search for poi",
+        "phi": 0.39942640824990705
+      },
+      {
+        "state": 10,
+        "label": "SINK:abandon",
+        "phi": 0.0
+      },
+      {
+        "state": 0,
+        "label": "search for destination",
+        "phi": -0.07010782463771839
+      },
+      {
+        "state": 5,
+        "label": "interaction item image",
+        "phi": -1.5225869976223783
+      }
+    ]
+  },
+  "R2_regularizer_contrast": {
+    "dataset": "Trivago",
+    "lambda1": 1.0,
+    "n_interior": 9,
+    "base_interior_range": 8.791480144949029,
+    "sobolev": {
+      "spearman_vs_base": 0.8833333333333333,
+      "interior_range": 2.4252097625257205,
+      "range_retained": 0.2758590956858159
+    },
+    "tikhonov": {
+      "spearman_vs_base": 0.8333333333333333,
+      "interior_range": 0.4672147677485363,
+      "range_retained": 0.0531440394615362
+    }
+  },
+  "R3_sink_discovery": {
+    "dataset": "Trivago",
+    "num_states": 11,
+    "conversion_sinks": [
+      9
+    ],
+    "residual_ranks": [
+      1
+    ],
+    "residual_worst": 1,
+    "phi_ranks": [
+      1
+    ],
+    "phi_worst": 1
+  },
+  "R4_bootstrap": {
+    "dataset": "Trivago",
+    "n_boot": 20,
+    "stability_table": [
+      {
+        "state": 8,
+        "label": "interaction item deals",
+        "phi_mean": 0.9014596788429382,
+        "phi_std": 0.0034553500502221804,
+        "cv": 0.003833061124434801
+      },
+      {
+        "state": 7,
+        "label": "interaction item rating",
+        "phi_mean": 0.8319984869020419,
+        "phi_std": 0.0027270751169638447,
+        "cv": 0.003277740476566093
+      },
+      {
+        "state": 4,
+        "label": "filter selection",
+        "phi_mean": 0.8159079324190547,
+        "phi_std": 0.004887839283715619,
+        "cv": 0.0059906750375840305
+      },
+      {
+        "state": 6,
+        "label": "interaction item info",
+        "phi_mean": 0.8112877679421409,
+        "phi_std": 0.00745918056781197,
+        "cv": 0.009194247543905713
+      },
+      {
+        "state": 3,
+        "label": "change of sort order",
+        "phi_mean": 0.6331220855328643,
+        "phi_std": 0.03071459446334336,
+        "cv": 0.048512909540099285
+      },
+      {
+        "state": 1,
+        "label": "search for item",
+        "phi_mean": 0.4955527423338477,
+        "phi_std": 0.013583180992275833,
+        "cv": 0.027410162091480474
+      },
+      {
+        "state": 2,
+        "label": "search for poi",
+        "phi_mean": 0.4063990537759919,
+        "phi_std": 0.008431487735504058,
+        "cv": 0.02074681930763246
+      },
+      {
+        "state": 0,
+        "label": "search for destination",
+        "phi_mean": -0.06670048987327207,
+        "phi_std": 0.003991664904548537,
+        "cv": 0.05984461151743676
+      },
+      {
+        "state": 5,
+        "label": "interaction item image",
+        "phi_mean": -1.4927720767450072,
+        "phi_std": 0.03089797168642314,
+        "cv": 0.020698385351483488
+      }
+    ]
+  },
+  "R5_downstream": {
+    "dataset": "Trivago",
+    "num_states": 11,
+    "n_sessions": 640728,
+    "conversion_rate": 0.9255581151440236,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "auc": {
+      "raw": {
+        "auc_mean": 0.7962402451839052,
+        "auc_std": 0.0005353014009653013
+      },
+      "raw+sobolev": {
+        "auc_mean": 0.8075484460539655,
+        "auc_std": 0.00041637279558056684
+      },
+      "raw+ridge": {
+        "auc_mean": 0.7921243291684565,
+        "auc_std": 0.0010252946250187537
+      },
+      "sobolev": {
+        "auc_mean": 0.7990464006627815,
+        "auc_std": 0.00037636298142849147
+      },
+      "ridge": {
+        "auc_mean": 0.7692275337462139,
+        "auc_std": 0.0010116982628989495
+      },
+      "bag_of_states": {
+        "auc_mean": 0.7842250577957787,
+        "auc_std": 0.001285473660359213
+      }
+    }
+  }
+}

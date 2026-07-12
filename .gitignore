@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+*.json
+*.aux
+*.log
+*.out
+*.gz
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.synctex.gz
+!results/*.json
